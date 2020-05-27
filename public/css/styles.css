@@ -1,0 +1,346 @@
+@charset "UTF-8";
+.navbar {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.brand {
+  font-family: 'Pangolin', cursive;
+}
+
+.hero {
+  min-height: 400px;
+  background-image: url("../images/hamburguesa.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-color: grey;
+  background-blend-mode: darken;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.hero img {
+  background-color: white;
+  border-radius: 50%;
+}
+
+.hero .text-hero * {
+  color: white;
+}
+
+/* CARD PRODUCT */
+.product-box {
+  padding: 0.5rem;
+}
+
+.card-product {
+  height: 100%;
+}
+
+.card-product img {
+  height: 100%;
+  width: auto;
+}
+
+.card-product .card-product-description {
+  padding-top: 0.5rem;
+}
+
+.card-product .card-product-action {
+  font-size: 1.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card-product .card-product-action button {
+  border-radius: 100%;
+  border: 0;
+  background-color: whitesmoke;
+  height: 2rem;
+  width: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card-product .price {
+  font-weight: 800;
+}
+
+.card-product .price:before {
+  content: '€';
+}
+
+/* SIDEBAR */
+.sidebar-column {
+  background-color: whitesmoke;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+ul.sidebar-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.sidebar-menu li {
+  width: 100%;
+  padding: 0.8rem 0;
+  text-align: left;
+  text-align: center;
+}
+
+ul.sidebar-menu li a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+ul.sidebar-menu li:hover {
+  background-color: grey;
+}
+
+ul.sidebar-menu li:hover a {
+  color: white;
+}
+
+table {
+  width: 100%;
+  text-transform: uppercase;
+  border: 1px solid whitesmoke;
+}
+
+table .min-width {
+  width: 1%;
+  white-space: nowrap;
+}
+
+table td.description {
+  text-transform: none;
+}
+
+.buttons-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+textarea {
+  min-height: 200px;
+}
+
+/* CART */
+#cart {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 1rem;
+  padding: 1rem;
+}
+
+#cart .cart-product {
+  border-bottom: 1px solid whitesmoke;
+}
+
+#cart .cart-product .product-info-top {
+  font-size: 1.1rem;
+  padding: 0.5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#cart .cart-product .product-info-top .quantity {
+  font-weight: 800;
+  width: 30px;
+}
+
+#cart .cart-product .product-info-top .quantity:before {
+  content: 'x';
+}
+
+#cart .cart-product .product-info-top .name {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#cart .cart-product .product-info-top .price {
+  font-weight: 800;
+}
+
+#cart .cart-product .product-info-top .price:before {
+  content: '€';
+}
+
+#cart .cart-product .product-info-bottom {
+  padding: 0.5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#cart .cart-product .product-info-bottom .minus, #cart .cart-product .product-info-bottom .plus {
+  cursor: pointer;
+  width: auto;
+  text-align: center;
+}
+
+#cart .cart-product .product-info-bottom .minus i, #cart .cart-product .product-info-bottom .plus i {
+  padding: 0.5rem;
+  background-color: whitesmoke;
+  border-radius: 50%;
+  text-align: center;
+}
+
+#cart .cart-product .product-info-bottom .description {
+  margin: 0 0.5rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#cart button {
+  width: 100%;
+}
+
+#cart .total-oder {
+  font-size: 1em;
+}
+
+#cart .total-order:before {
+  content: '€';
+}
+
+#cart #modify-cart {
+  display: none;
+}
+
+#mobile-cart-count {
+  display: none;
+}
+
+@media all and (max-width: 767px) {
+  .mobile-button-100 {
+    width: 100%;
+  }
+  section#home #cart {
+    display: none;
+    padding-top: 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    z-index: 9999;
+  }
+  section#home #cart #modify-cart {
+    display: block;
+  }
+  .showcart {
+    display: block !important;
+  }
+  #mobile-cart-count {
+    border-radius: 99px;
+    padding: 1rem 0;
+    position: fixed;
+    width: 90%;
+    margin: 0 auto;
+    bottom: 0.5rem;
+    background-color: black;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #mobile-cart-count p {
+    text-transform: uppercase;
+    font-size: 1.6em;
+    margin: 0;
+  }
+}
+
+/* CHECKOUT */
+#selectpickup .img-radio {
+  max-height: 50px;
+  width: auto;
+  margin: auto;
+}
+
+#selectpickup input[type=radio] {
+  display: none;
+}
+
+#selectpickup input[type=radio] + label img.on {
+  display: none;
+}
+
+#selectpickup input[type=radio] + label img.off {
+  display: block;
+}
+
+#selectpickup label:hover,
+#selectpickup input[type=radio]:checked + label {
+  border: 1px solid black;
+  background-color: whitesmoke;
+  cursor: pointer;
+}
+
+#selectpickup input[type=radio]:checked + label img.off {
+  display: none;
+}
+
+#selectpickup input[type=radio]:checked + label img.on {
+  display: block;
+}
+
+.textarea-section label {
+  text-align: center;
+  display: block;
+}
+
+.textarea-section textarea {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.map {
+  height: 400px;
+  width: 100%;
+}
+/*# sourceMappingURL=styles.css.map */

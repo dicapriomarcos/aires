@@ -1,0 +1,133 @@
+body {
+  position: relative;
+}
+
+#menu {
+  position: fixed;
+  overflow: scroll;
+  bottom: 0;
+  padding-bottom: 70px;
+  height: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  z-index: 99;
+}
+
+#menu img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 25%;
+  height: auto;
+  padding: 0.5rem 0;
+}
+
+#menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#menu ul li {
+  border-bottom: 1px solid black;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+
+#menu ul li:first-child {
+  border-top: 1px solid black;
+}
+
+#menu a {
+  margin: 0.5rem auto;
+  padding: 1rem;
+  font-size: 1.2em;
+  text-align: center;
+  color: black;
+}
+
+#menu a:hover {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+main {
+  padding: 1rem 0;
+  margin-bottom: 70px;
+}
+
+table {
+  width: 100%;
+}
+
+td:first-child {
+  width: 100%;
+}
+
+th:last-child,
+td:last-child {
+  width: 0;
+  text-align: right;
+}
+
+#mobile-control {
+  z-index: 9999;
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: black;
+  width: 100%;
+  height: 60px;
+  font-size: 2em;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 2px solid black;
+}
+
+#mobile-control .mobile-button {
+  display: block;
+  width: 25%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-right: 1px solid white;
+}
+
+#mobile-control .mobile-button:last-child {
+  border: 0;
+}
+
+#mobile-control svg {
+  height: 30px;
+  width: 30px;
+  fill: white;
+  color: white;
+}
+
+.site-title img {
+  height: 100px;
+  width: auto;
+}
+/*# sourceMappingURL=style.css.map */

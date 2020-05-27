@@ -1,0 +1,304 @@
+//font-family: 'Pangolin', cursive;
+.navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.brand {
+    font-family: 'Pangolin', cursive;
+}
+
+main#main {
+    //background-image: url('../images/pattern.png');
+}
+
+.hero {
+    min-height: 400px;
+    background-image: url('../images/hamburguesa.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-color: grey;
+    background-blend-mode: darken;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    img {
+        background-color: white;
+        border-radius: 50%;
+    }
+    .text-hero * {
+        color: white;
+    }
+}
+
+/* CARD PRODUCT */
+
+.product-box {
+    padding: 0.5rem;
+}
+.card-product {
+    height: 100%;
+    img {
+        height: 100%;
+        width: auto;
+    }
+
+    .card-product-description {
+        padding-top: 0.5rem;
+    }
+
+    .card-product-action {
+        font-size: 1.5em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        button {
+            border-radius: 100%;
+            border: 0;
+            background-color: whitesmoke;
+            height: 2rem;
+            width: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .price {
+        font-weight: 800;
+    }
+    .price:before {
+        content: '€'
+    }
+}
+
+/* SIDEBAR */
+.sidebar-column {
+    background-color: whitesmoke;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+ul.sidebar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+        width: 100%;
+        padding: 0.8rem 0;
+        text-align: left;
+        text-align: center;
+        a {
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+    }
+    li:hover {
+        background-color: grey;
+        a {
+            color: white;    
+        }
+        
+    }
+}
+
+
+table {
+    width: 100%;
+    text-transform: uppercase;
+    border: 1px solid whitesmoke;
+    .min-width{
+        width:1%;
+        white-space:nowrap;
+    }
+    td.description {
+        text-transform: none;
+
+    }
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+textarea {
+    min-height: 200px;
+}
+
+/* CART */
+
+#cart {
+    position: sticky;
+    top: 1rem;
+    padding: 1rem;
+    .cart-product {
+        border-bottom: 1px solid whitesmoke;
+        .product-info-top {
+            font-size: 1.1rem;
+            padding: 0.5rem 0;
+            display: flex;
+            justify-content: center;
+            .quantity {
+                font-weight: 800;
+                width: 30px;
+            }
+            .quantity:before {
+                content: 'x';
+            }
+            .name {
+                flex: 1;
+            }
+            .price {
+              font-weight: 800;  
+            }
+            .price:before {
+                content: '€';
+                
+            }
+        }
+
+        .product-info-bottom {
+            padding: 0.5rem 0;
+            display: flex;
+            .minus, .plus {
+                cursor: pointer;
+                width: auto;
+                text-align: center;
+                 i {
+                     padding: 0.5rem;
+                     background-color: whitesmoke;
+                     border-radius: 50%;
+                     text-align: center;
+                    }
+            }
+            .description {
+                margin: 0 0.5rem;
+                flex: 1;
+            }
+        }
+        
+    }
+    button {
+        width: 100%;
+    }
+    .total-oder {
+        font-size: 1em;
+    }
+    .total-order:before {
+        
+            content: '€';
+    }
+    #modify-cart {
+        display: none;
+    }
+}
+
+#mobile-cart-count {
+    display: none;
+}
+
+@media all and (max-width: 767px){
+    .mobile-button-100 {
+        width: 100%;
+    }
+    section#home #cart {
+        display: none;
+        padding-top: 2rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        z-index: 9999;
+        #modify-cart {
+            display: block;
+        }
+    }
+    .showcart {
+        display: block !important;
+    }
+    #mobile-cart-count {
+        border-radius: 99px;
+        padding: 1rem 0;
+        position: fixed;
+        width: 90%;
+        margin: 0 auto;
+        bottom: 0.5rem;
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p {
+            text-transform: uppercase;
+            font-size: 1.6em;
+            margin: 0;
+        }
+    }    
+}
+
+
+/* CHECKOUT */
+#selectpickup {
+    .img-radio {
+        max-height: 50px;
+        width: auto;
+        margin: auto;
+    }
+
+    input[type=radio] {
+        display: none;
+    }
+    
+    input[type=radio] + label img.on {
+        display: none;
+    }
+    
+    input[type=radio] + label img.off {
+        display: block;
+    }
+
+    label:hover,
+    input[type=radio]:checked + label {
+        border: 1px solid black;
+        background-color: whitesmoke;
+        cursor: pointer;
+    }
+    
+    input[type=radio]:checked + label img.off {
+        display: none;
+    }
+    
+    input[type=radio]:checked + label img.on {
+        display: block;
+    }
+
+    
+}
+
+
+
+.textarea-section {
+        label {
+            text-align: center;
+            display: block;
+        }
+        textarea {
+            width: 100%;
+            padding: 0.5rem;
+        }
+    }
+
+.map {
+    height: 400px;
+    width: 100%;
+}
+
+
+
+
+

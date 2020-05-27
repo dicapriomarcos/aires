@@ -1,0 +1,11 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'node_modules/bootswatch/dist/lux/variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Bootswatch theme main CSS files
+@import "node_modules/bootswatch/dist/lux/bootswatch";

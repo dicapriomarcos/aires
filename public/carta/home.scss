@@ -1,0 +1,17 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h3 {
+        color: white;
+        margin: 0;
+    }
+    .instagram {
+        svg {
+            height: 100px;
+            width: auto;
+        }
+    }
+}
