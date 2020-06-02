@@ -1,15 +1,16 @@
 //font-family: 'Pangolin', cursive;
+html {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
 .navbar {
     padding-top: 0;
     padding-bottom: 0;
-}
-
-.brand {
-    font-family: 'Pangolin', cursive;
-}
-
-main#main {
-    //background-image: url('../images/pattern.png');
+    .navbar-toggler {
+        i {
+            color: rgba(black , .6);
+        }
+    }
 }
 
 .hero {
@@ -26,6 +27,7 @@ main#main {
     align-items: center;
     text-align: center;
     img {
+        max-width: 60vw;
         background-color: white;
         border-radius: 50%;
     }
@@ -144,7 +146,7 @@ textarea {
             justify-content: center;
             .quantity {
                 font-weight: 800;
-                width: 30px;
+                width: 40px;
             }
             .quantity:before {
                 content: 'x';
@@ -160,7 +162,6 @@ textarea {
                 
             }
         }
-
         .product-info-bottom {
             padding: 0.5rem 0;
             display: flex;
@@ -185,13 +186,18 @@ textarea {
     button {
         width: 100%;
     }
-    .total-oder {
-        font-size: 1em;
-    }
-    .total-order:before {
-        
+    #total {
+        text-transform: none;
+        font-size: 1.2em;
+        .total-order {
+            margin-left: auto;
+            font-weight: bold;
+            }
+        .total-order:before {
             content: '€';
+            }
     }
+    
     #modify-cart {
         display: none;
     }
@@ -205,7 +211,7 @@ textarea {
     .mobile-button-100 {
         width: 100%;
     }
-    section#home #cart {
+    section#app-home #cart {
         display: none;
         padding-top: 2rem;
         position: fixed;
@@ -298,6 +304,32 @@ textarea {
     width: 100%;
 }
 
+/* USER */
+
+#table-user {
+    text-transform: none;
+    border-collapse: separate;
+    border-spacing: 2em;
+    border: 0;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    list-style: none;
+    font-size: 1.2em;
+    tr {
+        padding: 0.8rem 0;
+        input {
+            background-color: whitesmoke;
+            display: inline-flex;
+            border: 0;
+            padding: 0.5rem;
+            width: 100%;
+        }
+        td:first-child {
+            width: 0;
+        }
+    }
+
+}
 
 
 

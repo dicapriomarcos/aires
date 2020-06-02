@@ -20,14 +20,15 @@ Auth::routes();
 Auth::routes(['verify' => true]);
 
 /* site */
-Route::get('/', 'SiteController@index')->name('home');
+Route::get('/', 'SiteController@index')->name('index');
+Route::get('/carta', 'SiteController@carta')->name('carta');
+Route::get('/pideahora', 'SiteController@app')->name('home');
 
 /* CARTA */
 Route::get('/carta', 'SiteController@carta')->name('carta');
 
 
 Route::group(['middleware' => ['auth' , 'admin']], function(){
-
 
     /* ADMIN */
     Route::get('/admin/', 'SiteController@admin')->name('admin.index');
@@ -51,12 +52,14 @@ Route::group(['middleware' => ['auth' , 'admin']], function(){
     Route::post('/admin/products/store', 'ProductController@store')->name('store.product');
     Route::post('/admin/products/delete', 'ProductController@destroy')->name('delete.product');
 
+});
 
-
+Route::middleware(['auth'])->group( function(){
+    Route::get('usuario/misdatos', 'UserController@index')->name('user.index');
+    Route::post('usuario/misdatos/guardar', 'UserController@store')->name('user.store');
 });
 
 Route::middleware(['auth' , 'verified'])->group( function(){
-
     /* STRIPE */
     Route::get('checkout', 'StripeController@index')->name('payform');
     Route::get('/stripe', 'StripeController@index');

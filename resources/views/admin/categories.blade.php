@@ -11,6 +11,7 @@
                     <thead class="bg-dark text-light">
                         <th scope="col">#</th>
                         <th scope="col">Nombre de la Categoría</th>
+                        <th scope="col">Estado</th>
                         <th scope="col" class="min-width">Acciones</th>
                     </thead>
                     <tbody>
@@ -18,6 +19,7 @@
                         <tr>
                             <td>{{ $category->id }}</td>
                             <td>{{ $category->name }}</td>
+                            <td class="text-center px-2 min-width">{!! $category->status == 'active' ? '<span class="badge badge-success">Activa</span>' : '<span class="badge badge-danger">Pausada</span>' !!}</td>
                             <td class="min-width"><a class="ml-auto btn btn-warning btn-sm"
                                     href="{{ route('create.category', $category->id) }}"><i
                                         class="fas fa-edit mr-2"></i>Editar</a>

@@ -1,20 +1,21 @@
 @extends('layouts.app')
 
 @section('content')
-<section id="home">
+<section id="app-home">
+@if($site->open == 'open')
 <div class="container-fluid hero">
     <div class="text-hero">
         <img src="{{ asset('images/airesburgerbar-square.png')  }}" alt="">
     </div>
 </div>
-@if($site->open == 'open')
+
 <div class="container py-4">
     <div id="app" class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-7">
             @if(isset($categories))
                 @foreach($categories as $category)
             <div class="py-3"><h3>{{ $category->name }}</h3></div>
-            <div class="row">
+            <div class="row mb-3">
                 @foreach($category->products as $product)
                 <div class="col-md-6 product-box">
                     <div class="card card-product rounded p-3 shadow">
@@ -36,7 +37,7 @@
             </div>
             @endif
         </div>
-        <div class="col-md-4">
+        <div class="col-md-5">
             @include('cart.cart')
         </div>
     </div>

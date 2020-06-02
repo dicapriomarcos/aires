@@ -16,7 +16,7 @@
                 </div>
                 <div class="product-info-bottom"></div>
             </section>
-            <div class="p-3"><h5>Total del pedido: <span class="total-order">@{{ cart.total ?cart.total.toFixed(2) : '' }}</span></h5></div>
+            <div id="total" class="p-3"><span class="text-uppercase">Total</span> del pedido: <span class="total-order">@{{ cart.total ?cart.total.toFixed(2) : '' }}</span></div>
             <div class="my-3"><a class="btn btn-primary d-block" href="{{ route('payform') }}">Pasar por caja</a></div>
     </div>
     <div v-else>

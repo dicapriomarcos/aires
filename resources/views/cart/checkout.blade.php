@@ -50,9 +50,9 @@
                     </div>
                     <div class="product-info-bottom"></div>
                 </section>
-                <div class="py-3">
+                <div id="cart" class="py-3">
                     <h4 class="text-right"><strong>Total: <span
-                                class="total-order">@{{ cart.total.toFixed(2) }}</span></strong></h4>
+                                class="total-order">€@{{ cart.total.toFixed(2) }}</span></strong></h4>
                 </div>
                 <div class="textarea-section">
                     <label><h5>¿Quieres incluir alguna información sobre Alergenos?</h5></label>
@@ -68,7 +68,7 @@
                         (Stripe)</button>
 
                 </div>
-            </div>
+            </div> <!-- END #CART -->
         </div>
     </div>
     @include('modals.bizum-pay')

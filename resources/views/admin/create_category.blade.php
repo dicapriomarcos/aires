@@ -14,9 +14,12 @@
                     <label for="name">Nombre de la Categoría</label>
                     <input name="name" type="text" class="form-control" value="{{{ isset($category) ? $category->name : '' }}}" required>
                 </div>
+                <div class="custom-control custom-switch my-3">
+                    <input type="checkbox" class="custom-control-input" id="customSwitch1" name="status" {{ isset($category) && $category->status == 'active' ? 'checked' : '' }}>
+                    <label class="custom-control-label" for="customSwitch1">Estado de la categoría</label>
+                </div>
                 <div class="buttons-container"><a class="mr-4 btn btn-info" href="{{ route('admin.categories')  }}"><i class="fas fa-undo-alt mr-2"></i>Volver</a><button type="submit" class="btn btn-success"><i class="fas fa-save mr-2"></i>{{{ isset($category) ? 'Guardar Categoría' : 'Crear Categoría' }}}</button></div>
-            </form>
-            
+            </form>  
         </div>
     </div>
 </main>

@@ -44,25 +44,18 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         if(Request()->has('category_id')){
-            
             $category = Category::find($request->category_id);
-            $category->name = $request->input('name');
-            $update = $category->save();
-
-            if($update){
-                return redirect()->route('admin.categories')->with('success' , 'La Categoría se ha guardado correctamente');
-            }else{
-                return back()->with('error' , 'No se ha podido guardar la categoría');
-            }
         }else{
             $category = new Category;
-            $category->name = $request->input('name');
-            $save = $category->save();
-            if($save){
-                return redirect()->route('admin.categories')->with('success' , 'La Categoría se ha creado correctamente');
-            }else{
-                return back()->with('error' , 'No se ha podido crear la categoría');
-            }
+        }   
+        
+        $category->name = $request->input('name');
+        $category->status = ($request->input('status')) ? 'active' : 'paused';
+        $save = $category->save();
+        if($save){
+            return redirect()->route('admin.categories')->with('success' , 'La Categoría se ha guardado correctamente');
+        }else{
+            return back()->with('error' , 'No se ha podido guardar la categoría');
         }
     }
 

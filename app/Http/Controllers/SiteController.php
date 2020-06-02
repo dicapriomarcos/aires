@@ -26,12 +26,27 @@ class SiteController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+
     public function index()
     {
-        $categories = Category::all();
+
         $site = Site::find(1);
 
-        return view('home')->with('categories' , $categories)->with('site', $site);
+        return view('index')->with('site', $site);
+    }
+
+    public function carta(){
+
+
+        return view('carta.index');
+    }
+
+    public function app()
+    {
+        $categories = Category::where('status' , '=' , 'active' )->get();
+        $site = Site::find(1);
+
+        return view('app-home')->with('categories' , $categories)->with('site', $site);
     }
 
     public function admin(){
@@ -64,8 +79,4 @@ class SiteController extends Controller
         return view('cart.checkout')->with('cart' , $cart);
     }
 
-    public function carta(){
-
-        return view('carta.index');
-    }
 }
